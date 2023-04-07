@@ -1,0 +1,42 @@
+.banner {
+    text-align: center;
+}
+
+.homepage-product-list {
+    @include content1024;
+    padding: 70px 0;
+}
+
+.homepage-feature-title {
+    @extend .feature-title;
+}
+
+.featured-categories-wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    .category {
+        width: 45%;
+        position: relative;
+
+        &:hover .category-text {
+            color: #ccc;
+        }
+    }
+
+    .category-image {
+        max-width: 100%;
+    }
+
+    .category-text {
+        font-family: $khand;
+        position: absolute;
+        bottom: 5%;
+        right: 5%;
+        font-size: 60px;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color:#777;
+        transition: color, 0.25s;
+        transition-timing-function: ease-in-out;
+    }
+}

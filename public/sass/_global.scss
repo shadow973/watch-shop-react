@@ -1,0 +1,84 @@
+html, body {
+    height: 100%;
+}
+
+main {
+    padding: $headerHeight 0 0;
+    font-family: $roboto;
+    box-sizing: border-box;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+header, footer {
+    flex-shrink: 0;
+
+    a {
+        color: $fontColorLight;
+
+        &:visited {
+            color: $fontColorLight;
+        }
+    }
+}
+
+p {
+    padding: 0 0 20px;
+    line-height: 1.5;
+}
+
+.content-wrapper {
+    @include content1024;
+    flex-grow: 1;
+}
+
+.content-wide {
+    @include content1600;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20%;
+    justify-content: space-around;
+    grid-row-gap: 100px;
+    grid-auto-rows: minmax(min-content, max-content);
+}
+
+.no-results-container {
+    justify-self: center;
+    align-self: center;
+    font-size: 30px;
+}
+
+.has-error {
+    .quantity {
+        border-color: #f00;
+    }
+}
+
+.error {
+    display: block;
+    font-size: 13px;
+    color: #f00;
+    padding: 5px 0 0;
+}
+
+
+
+.feature-title {
+    position: relative;
+    font-family: $khand;
+    font-size: 45px;
+    margin: 0 0 100px;
+
+    &:after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 50%;
+        width: 65%;
+        height: 2px;
+        background: #999;
+    }
+}

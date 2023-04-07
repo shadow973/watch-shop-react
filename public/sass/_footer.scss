@@ -1,0 +1,34 @@
+footer {
+    background: $headerFooterBg;
+    color: $fontColorLight;
+}
+
+.footer-wrapper {
+    @include width1024;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 50px 0;
+    box-sizing: border-box;
+}
+
+.footer-column {
+    justify-self: center;
+}
+
+.footer-info-item:not(:last-child) {
+    margin: 0 0 20px;
+}
+
+.footer-social-icons {
+    margin: 15px 0 0;
+    font-size: 18px;
+
+    .fab {
+        font-size: 25px;
+    }
+
+    .fa-twitter-square {
+        padding: 0 0 0 10px;
+    }
+}

@@ -1,0 +1,700 @@
+/* line 1, ../sass/_reset.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+/* line 22, ../sass/_reset.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 26, ../sass/_reset.scss */
+body {
+  line-height: 1;
+}
+
+/* line 29, ../sass/_reset.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 32, ../sass/_reset.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 35, ../sass/_reset.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 40, ../sass/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 45, ../sass/_reset.scss */
+a {
+  outline: none;
+  color: #000;
+  text-decoration: none;
+}
+/* line 50, ../sass/_reset.scss */
+a:visited, a:active {
+  color: #000;
+}
+
+/* line 1, ../sass/_global.scss */
+html, body {
+  height: 100%;
+}
+
+/* line 5, ../sass/_global.scss */
+main {
+  padding: 80px 0 0;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* line 14, ../sass/_global.scss */
+header, footer {
+  flex-shrink: 0;
+}
+/* line 17, ../sass/_global.scss */
+header a, footer a {
+  color: #f2f2f2;
+}
+/* line 20, ../sass/_global.scss */
+header a:visited, footer a:visited {
+  color: #f2f2f2;
+}
+
+/* line 26, ../sass/_global.scss */
+p {
+  padding: 0 0 20px;
+  line-height: 1.5;
+}
+
+/* line 31, ../sass/_global.scss */
+.content-wrapper {
+  width: 1024px;
+  margin: 80px auto;
+  flex-grow: 1;
+}
+
+/* line 36, ../sass/_global.scss */
+.content-wide {
+  width: 1600px;
+  margin: 80px auto;
+}
+
+/* line 40, ../sass/_global.scss */
+.product-grid {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20%;
+  justify-content: space-around;
+  grid-row-gap: 100px;
+  grid-auto-rows: minmax(min-content, max-content);
+}
+
+/* line 48, ../sass/_global.scss */
+.no-results-container {
+  justify-self: center;
+  align-self: center;
+  font-size: 30px;
+}
+
+/* line 55, ../sass/_global.scss */
+.has-error .quantity {
+  border-color: #f00;
+}
+
+/* line 60, ../sass/_global.scss */
+.error {
+  display: block;
+  font-size: 13px;
+  color: #f00;
+  padding: 5px 0 0;
+}
+
+/* line 69, ../sass/_global.scss */
+.feature-title, .homepage-feature-title, .product-specs-title, .cart-feature-title {
+  position: relative;
+  font-family: "Khand", sans-serif;
+  font-size: 45px;
+  margin: 0 0 100px;
+}
+/* line 75, ../sass/_global.scss */
+.feature-title:after, .homepage-feature-title:after, .product-specs-title:after, .cart-feature-title:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 65%;
+  height: 2px;
+  background: #999;
+}
+
+/* line 1, ../sass/_header.scss */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #f2f2f2;
+  z-index: 1;
+}
+
+/* line 12, ../sass/_header.scss */
+.header-wrapper {
+  width: 1024px;
+  margin: 0 auto;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  align-items: center;
+}
+
+/* line 20, ../sass/_header.scss */
+.logo {
+  display: flex;
+}
+
+/* line 24, ../sass/_header.scss */
+.icon-sw-logo {
+  font-size: 35px;
+}
+
+/* line 28, ../sass/_header.scss */
+.logo-text {
+  font-family: "Khand", sans-serif;
+  font-size: 40px;
+  display: inline-block;
+  margin: 0 0 0 10px;
+}
+
+/* line 35, ../sass/_header.scss */
+.menu {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* line 41, ../sass/_header.scss */
+.nav {
+  display: flex;
+  margin: 0 20px 0 0;
+  cursor: pointer;
+}
+
+/* line 47, ../sass/_header.scss */
+.nav-item {
+  padding: 20px;
+  position: relative;
+}
+/* line 52, ../sass/_header.scss */
+.nav-item:hover .sub-menu {
+  display: block;
+}
+/* line 57, ../sass/_header.scss */
+.nav-item > a, .nav-item span {
+  transition: color, 0.1s;
+}
+/* line 60, ../sass/_header.scss */
+.nav-item > a:hover, .nav-item span:hover {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+/* line 66, ../sass/_header.scss */
+.sub-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: rgba(255, 255, 255, 0.8);
+  color: #333;
+  padding: 10px;
+  width: 100px;
+}
+
+/* line 77, ../sass/_header.scss */
+.category-item {
+  padding: 15px 0;
+  transition: color, 0.1s;
+}
+/* line 81, ../sass/_header.scss */
+.category-item a:hover {
+  color: rgba(0, 0, 0, 0.5);
+}
+/* line 85, ../sass/_header.scss */
+.category-item a {
+  color: #444;
+}
+/* line 88, ../sass/_header.scss */
+.category-item a:visited {
+  color: #444;
+}
+/* line 93, ../sass/_header.scss */
+.category-item.all {
+  border-top: 1px solid #999;
+}
+
+/* line 98, ../sass/_header.scss */
+.cart-quantity {
+  display: inline-block;
+  font-size: 13px;
+  color: #333;
+  background: #fff;
+  padding: 2px 4px;
+  font-family: arial;
+  border-radius: 3px;
+  position: relative;
+  left: -5px;
+  top: 5px;
+}
+
+/* line 1, ../sass/_footer.scss */
+footer {
+  background: rgba(0, 0, 0, 0.8);
+  color: #f2f2f2;
+}
+
+/* line 6, ../sass/_footer.scss */
+.footer-wrapper {
+  width: 1024px;
+  margin: 0 auto;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 50px 0;
+  box-sizing: border-box;
+}
+
+/* line 15, ../sass/_footer.scss */
+.footer-column {
+  justify-self: center;
+}
+
+/* line 19, ../sass/_footer.scss */
+.footer-info-item:not(:last-child) {
+  margin: 0 0 20px;
+}
+
+/* line 23, ../sass/_footer.scss */
+.footer-social-icons {
+  margin: 15px 0 0;
+  font-size: 18px;
+}
+/* line 27, ../sass/_footer.scss */
+.footer-social-icons .fab {
+  font-size: 25px;
+}
+/* line 31, ../sass/_footer.scss */
+.footer-social-icons .fa-twitter-square {
+  padding: 0 0 0 10px;
+}
+
+/* line 1, ../sass/_homepage.scss */
+.banner {
+  text-align: center;
+}
+
+/* line 5, ../sass/_homepage.scss */
+.homepage-product-list {
+  width: 1024px;
+  margin: 80px auto;
+  padding: 70px 0;
+}
+
+/* line 14, ../sass/_homepage.scss */
+.featured-categories-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+/* line 18, ../sass/_homepage.scss */
+.featured-categories-wrapper .category {
+  width: 45%;
+  position: relative;
+}
+/* line 22, ../sass/_homepage.scss */
+.featured-categories-wrapper .category:hover .category-text {
+  color: #ccc;
+}
+/* line 27, ../sass/_homepage.scss */
+.featured-categories-wrapper .category-image {
+  max-width: 100%;
+}
+/* line 31, ../sass/_homepage.scss */
+.featured-categories-wrapper .category-text {
+  font-family: "Khand", sans-serif;
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  font-size: 60px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #777;
+  transition: color, 0.25s;
+  transition-timing-function: ease-in-out;
+}
+
+/* line 1, ../sass/_product_tile.scss */
+.product-tile {
+  text-align: center;
+  box-shadow: 1px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  font-family: "Khand", sans-serif;
+  font-size: 18px;
+  position: relative;
+}
+/* line 9, ../sass/_product_tile.scss */
+.product-tile:after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: opacity 0.2s ease-in-out;
+}
+/* line 23, ../sass/_product_tile.scss */
+.product-tile:hover:after {
+  opacity: 0.5;
+}
+
+/* line 28, ../sass/_product_tile.scss */
+.product-tile-image {
+  max-width: 80%;
+}
+
+/* line 32, ../sass/_product_tile.scss */
+.product-tile-details {
+  display: block;
+}
+/* line 35, ../sass/_product_tile.scss */
+.product-tile-details.name {
+  padding: 20px 0;
+}
+/* line 39, ../sass/_product_tile.scss */
+.product-tile-details.price {
+  color: #888;
+  font-weight: 600;
+}
+
+/* line 1, ../sass/_product_page.scss */
+.product-wrapper {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+/* line 6, ../sass/_product_page.scss */
+.product-image {
+  text-align: center;
+}
+/* line 8, ../sass/_product_page.scss */
+.product-image img {
+  max-width: 100%;
+  max-height: 300px;
+}
+
+/* line 14, ../sass/_product_page.scss */
+.product-title {
+  font-family: "Khand", sans-serif;
+  font-size: 30px;
+  color: #333;
+  padding: 0 0 20px;
+}
+
+/* line 21, ../sass/_product_page.scss */
+.model-number {
+  font-size: 16px;
+  color: #999;
+}
+
+/* line 26, ../sass/_product_page.scss */
+.product-price {
+  font-size: 25px;
+  color: #333;
+  padding: 20px 0;
+}
+
+/* line 32, ../sass/_product_page.scss */
+.add-to-cart {
+  text-align: right;
+  margin: 30px 0 0;
+}
+
+/* line 37, ../sass/_product_page.scss */
+.quantity {
+  width: 60px;
+  padding: 0 5px;
+  font-size: 15px;
+  -moz-appearance: textfield;
+  height: 51px;
+  text-align: center;
+}
+/* line 45, ../sass/_product_page.scss */
+.quantity::-webkit-outer-spin-button, .quantity::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* line 52, ../sass/_product_page.scss */
+.add-btn {
+  height: 55px;
+  cursor: pointer;
+  background: #333;
+  color: #eee;
+  border: 0;
+  font-size: 18px;
+  padding: 0 10px;
+}
+
+/* line 62, ../sass/_product_page.scss */
+.product-specs {
+  margin: 80px 0 0;
+}
+
+/* line 69, ../sass/_product_page.scss */
+.product-specs-title:after {
+  width: 62%;
+}
+
+/* line 74, ../sass/_product_page.scss */
+.spec-item {
+  display: grid;
+  grid-template-columns: 33% 1fr;
+}
+/* line 79, ../sass/_product_page.scss */
+.spec-item:not(:last-child) .spec-text {
+  border-bottom: 1px solid #ccc;
+}
+
+/* line 85, ../sass/_product_page.scss */
+.spec-text {
+  padding: 10px 0 10px 10px;
+  display: inline-block;
+}
+
+/* line 90, ../sass/_product_page.scss */
+.spec-item-name {
+  background: #eee;
+  color: #333;
+}
+
+/* line 1, ../sass/_filters.scss */
+.product-list.filters {
+  display: grid;
+  grid-template-columns: 20% 80%;
+}
+
+/* line 6, ../sass/_filters.scss */
+.product-filters {
+  padding: 0 20px 0 0;
+}
+
+/* line 10, ../sass/_filters.scss */
+.filters-wrapper {
+  margin: 20px 0 0;
+}
+
+/* line 14, ../sass/_filters.scss */
+.filters-title {
+  font-family: "Khand", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  padding: 0 0 15px;
+  border-bottom: 1px solid #ccc;
+}
+
+/* line 23, ../sass/_filters.scss */
+.filters-section {
+  padding: 10px 0 30px;
+}
+/* line 26, ../sass/_filters.scss */
+.filters-section:not(:last-child) {
+  border-bottom: 1px solid #ccc;
+}
+
+/* line 31, ../sass/_filters.scss */
+.filter-name {
+  display: inline-block;
+  padding: 10px 0;
+  font-size: 17px;
+}
+
+/* line 37, ../sass/_filters.scss */
+.filter-item {
+  display: block;
+  padding: 5px 0;
+  font-size: 15px;
+}
+
+/* line 43, ../sass/_filters.scss */
+.filter-value {
+  cursor: pointer;
+}
+
+/* line 47, ../sass/_filters.scss */
+.applied-filters {
+  padding: 20px 0 10px;
+}
+
+/* line 51, ../sass/_filters.scss */
+.applied-filter-name {
+  display: block;
+  font-size: 14px;
+  position: relative;
+  cursor: pointer;
+  padding: 20px 0;
+  border-bottom: 1px solid #ccc;
+}
+/* line 59, ../sass/_filters.scss */
+.applied-filter-name:after {
+  content: "x";
+  position: absolute;
+  right: 0;
+  color: #f00;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* line 2, ../sass/_footer_pages.scss */
+.terms-content h3 {
+  font-size: 22px;
+  padding: 35px 0 30px;
+}
+
+/* line 4, ../sass/_cart.scss */
+.cart-feature-title:after {
+  width: 90%;
+}
+
+/* line 9, ../sass/_cart.scss */
+.cart-header {
+  background: #f2f2f2;
+}
+
+/* line 13, ../sass/_cart.scss */
+.item-header {
+  padding: 20px 20px 20px 0;
+  font-size: 20px;
+}
+/* line 17, ../sass/_cart.scss */
+.item-header:not(.item-name) {
+  text-align: center;
+  padding: 20px;
+}
+
+/* line 23, ../sass/_cart.scss */
+.cart-line {
+  display: grid;
+  grid-template-columns: 12.5% 12.5% 17% 17% 20.5% 20.5%;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+/* line 31, ../sass/_cart.scss */
+.cart-image {
+  max-width: 50%;
+}
+
+/* line 35, ../sass/_cart.scss */
+.item-data {
+  display: inline-block;
+}
+/* line 38, ../sass/_cart.scss */
+.item-data:not(.item-name-wrapper) {
+  text-align: center;
+}
+
+/* line 43, ../sass/_cart.scss */
+.item-model {
+  display: block;
+  font-size: 15px;
+  color: #999;
+  padding: 5px 0 0;
+}
+
+/* line 50, ../sass/_cart.scss */
+.remove-cart-item {
+  background: none;
+  color: #f00;
+  outline: 0;
+  font-weight: 600;
+  border: 0;
+  cursor: pointer;
+}
+
+/* line 59, ../sass/_cart.scss */
+.total-wrapper {
+  width: 50%;
+  float: right;
+}
+
+/* line 64, ../sass/_cart.scss */
+.total-title {
+  padding: 80px 0 30px;
+  font-size: 30px;
+}
+
+/* line 69, ../sass/_cart.scss */
+.total-cell {
+  padding: 20px;
+  display: inline-block;
+}
+
+/* line 74, ../sass/_cart.scss */
+.total-value {
+  border-left: 1px solid #ddd;
+}
+
+/* line 78, ../sass/_cart.scss */
+.total-line {
+  font-size: 18px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  background: #eee;
+}
+/* line 84, ../sass/_cart.scss */
+.total-line:nth-child(even) {
+  background: #fcfcfc;
+}
+
+/* line 89, ../sass/_cart.scss */
+.empty-cart-title {
+  font-size: 40px;
+  text-align: center;
+}

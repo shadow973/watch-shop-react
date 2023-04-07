@@ -1,0 +1,14 @@
+@mixin width1024 {
+    width: $breakpoint1024;
+    margin: 0 auto;
+}
+
+@mixin content1024 {
+    width: $breakpoint1024;
+    margin: 80px auto;
+}
+
+@mixin content1600 {
+    width: $breakpoint1600;
+    margin: 80px auto;
+}

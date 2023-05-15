@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavHashLink as NavLink } from 'react-router-hash-link';
 
-const Logo = () =>  {
+export default function Logo () {
     return (
         <div className="logo">
             <NavLink to="/#app">
@@ -12,4 +12,3 @@ const Logo = () =>  {
     )
 }
 
-export default Logo;

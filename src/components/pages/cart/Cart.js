@@ -59,7 +59,7 @@ class Cart extends React.Component {
                     <li className="cart-line cart-header">
                         <span className="item-header"></span>
                         <span className="item-header"></span>
-                        <span className="item-header item-name">Product</span>
+                        <span className="item-header item-name">Products</span>
                         <span className="item-header item-price">Price</span>
                         <span className="item-header item-quantity">Quantity</span>
                         <span className="item-header item-total">Total</span>

@@ -10,7 +10,7 @@ const Logo = () =>  {
                 <ul className="sub-menu">
                     <li className="category-item"><NavLink to="/Vintage#app">Vintage</NavLink></li>
                     <li className="category-item"><NavLink to="/Extant#app">Extant</NavLink></li>
-                    <li className="category-item"><NavLink to="/Steampunk#app">Steampunk</NavLink></li>
+                    <li className="category-item"><NavLink to="/Steampunk#app">Steampunks</NavLink></li>
                     <li className="category-item all"><NavLink to="/allproducts#app">All Products</NavLink></li>
                 </ul>
             </li>
